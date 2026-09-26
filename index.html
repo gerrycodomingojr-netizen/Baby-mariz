@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy 1 Month, Babyyy❤️</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="hearts"></div>
+
+    <nav>
+        <div class="logo">❤️ Us</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#letter-section">Letter</a>
+            <a href="#memories">Memories</a>
+            <a href="#game-section">Game</a>
+            <a href="#surprise-section">Surprise</a>
+        </div>
+
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="floating-heart">💗</div>
+
+            <p class="small-title">A LITTLE CELEBRATION OF US</p>
+
+            <h1>
+                Happy
+                <span>1 Month</span>
+                Babyy kooo ❤️
+            </h1>
+
+            <p class="hero-text">
+                One month and still counting. I hope mag kita na us hihihi. 
+                I LOVE YOU SO MUCHHHHYYYY
+            </p>
+
+            <button class="main-btn" onclick="scrollToSection('letter-section')">
+                💌 Read My Letter
+            </button>
+        </div>
+
+        <div class="hero-photo">
+            <div class="photo-frame">
+                <img src="1.jpg" alt="Our Photo" />
+                <div class="photo-heart">❤️</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTER -->
+    <section class="counter-section">
+        <p class="section-small">OUR JOURNEY</p>
+
+        <h2>Every second with you matters 💕</h2>
+
+        <div class="counter">
+            <div class="counter-box">
+                <span id="days">0</span>
+                <p>Days</p>
+            </div>
+
+            <div class="counter-box">
+                <span id="hours">0</span>
+                <p>Hours</p>
+            </div>
+
+            <div class="counter-box">
+                <span id="minutes">0</span>
+                <p>Minutes</p>
+            </div>
+
+            <div class="counter-box">
+                <span id="seconds">0</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LETTER -->
+    <section id="letter-section" class="letter-section">
+        <div class="letter-image">
+            <img src="2.jpg" alt="Memory" />
+        </div>
+
+        <div class="letter">
+            <p class="section-small">A LETTER FOR YOU</p>
+
+            <h2>To My Favorite Person ❤️</h2>
+
+            <p>Happy 1 month, Babyyy! 🥰</p>
+
+            <p>
+                I just want to say thank you for making this past month so special.
+                Even the smallest moments with you became memories that I really treasure.
+            </p>
+
+            <p>
+                I love talking to you, laughing with you, and simply knowing that
+                you're there. You make ordinary days feel a little more special.
+            </p>
+
+            <p>
+                This is only our first month, but I hope we get to celebrate
+                many more months together. I will always love you po babyy.
+                Mwaaaaaaaaaaaaaaaaaa.
+            </p>
+
+            <p class="special-line">I love you so much. ❤️</p>
+
+            <p class="signature">— Your Babyy 💕</p>
+        </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section id="memories" class="memories">
+        <p class="section-small">OUR MEMORIES</p>
+
+        <h2>Little moments, big memories 📸</h2>
+
+        <p class="memory-description">
+            Every picture tells a little story about us.
+        </p>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="t1.jpg" alt="Memory 1" />
+                <div class="overlay">
+                    <span>Chocolate 1 </span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="t2.jpg" alt="Memory 2" />
+                <div class="overlay">
+                    <span>Chocolate 2 </span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="t3.jpg" alt="Memory 3" />
+                <div class="overlay">
+                    <span>Chocolate 3</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="c1.jpg" alt="Memory 4" />
+                <div class="overlay">
+                    <span>SOFERR GANDAAAAAA</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="c2.jpg" alt="Memory 5" />
+                <div class="overlay">
+                    <span>crushhh kooo too</span>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="c3.jpg" alt="Memory 6" />
+                <div class="overlay">
+                    <span>cuite baby marizz hihi</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="click-text">Tap a photo to see it closer ✨</p>
+    </section>
+
+    <!-- GAME -->
+    <section id="game-section" class="game-section">
+        <p class="section-small">A LITTLE GAME</p>
+        <h2>Love Match 💞</h2>
+
+        <div class="game-panel">
+            <div class="game-info">
+                <div class="game-score-box">
+                    <span id="moves">0</span>
+                    <small>Moves</small>
+                </div>
+
+                <div class="game-score-box">
+                    <span id="matches">0</span>
+                    <small>Matches</small>
+                </div>
+            </div>
+
+            <button id="restartGame" class="restart-btn">🔁 Play Again</button>
+        </div>
+
+        <div id="memoryGame" class="memory-game" aria-label="Love match game"></div>
+    </section>
+
+    <!-- PHOTO MODAL -->
+    <div id="photoModal" class="modal" role="dialog" aria-modal="true">
+        <span id="closeModal" aria-label="Close">&times;</span>
+        <img id="modalImage" src="" alt="Enlarged memory" />
+    </div>
+
+    <!-- SURPRISE -->
+    <section id="surprise-section" class="surprise-section">
+        <p class="section-small">ONE LAST THING...</p>
+
+        <h2>I have a surprise for you 🎁</h2>
+
+        <button id="surpriseBtn" class="surprise-btn">
+            🎁 Open Your Surprise
+        </button>
+
+        <div id="surpriseBox" class="surprise-box">
+            <div class="giant-heart">❤️</div>
+
+            <h3>You are my favorite person.</h3>
+
+            <p>
+                Thank you for choosing me and for making my days a little brighter.
+            </p>
+
+            <p>Happy 1 Month, baby! 💕</p>
+
+            <strong>Here's to many more months together. ❤️</strong>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
