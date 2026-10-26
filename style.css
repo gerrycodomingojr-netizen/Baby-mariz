@@ -11,7 +11,9 @@ html {
 body {
     font-family: Arial, sans-serif;
     color: #3d2630;
-    background: #fff7fa;
+    background:
+        radial-gradient(circle at top, rgba(255, 202, 214, 0.8), transparent 32%),
+        linear-gradient(180deg, #fffafc 0%, #fff5f9 100%);
     overflow-x: hidden;
     position: relative;
 }
@@ -63,12 +65,14 @@ nav {
     backdrop-filter: blur(15px);
     z-index: 100;
     border-bottom: 1px solid rgba(255, 100, 150, 0.1);
+    box-shadow: 0 10px 30px rgba(237, 82, 121, 0.08);
 }
 
 .logo {
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     font-weight: bold;
     color: #ed5279;
+    text-shadow: 0 0 18px rgba(237, 82, 121, 0.2);
 }
 
 .nav-links {
@@ -148,7 +152,7 @@ nav {
 .surprise-btn,
 .restart-btn {
     border: none;
-    background: #ed5279;
+    background: linear-gradient(135deg, #ff7ea8, #ed5279);
     color: white;
     padding: 15px 28px;
     border-radius: 30px;
@@ -161,8 +165,8 @@ nav {
 .main-btn:hover,
 .surprise-btn:hover,
 .restart-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 30px rgba(237, 82, 121, 0.4);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 15px 30px rgba(237, 82, 121, 0.45);
 }
 
 .floating-heart {
@@ -223,6 +227,7 @@ nav {
     padding: 25px 15px;
     border-radius: 20px;
     background: #fff1f5;
+    box-shadow: 0 10px 18px rgba(237, 82, 121, 0.08);
 }
 
 .counter-box span {
@@ -311,6 +316,8 @@ nav {
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
+    border: 2px solid rgba(237, 82, 121, 0.08);
+    box-shadow: 0 14px 30px rgba(133, 72, 95, 0.08);
 }
 
 .gallery-item img {
@@ -552,6 +559,7 @@ nav {
     border-radius: 999px;
     border: 1px solid rgba(237, 82, 121, 0.25);
     background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 24px rgba(237, 82, 121, 0.08);
 }
 
 /* ANIMATIONS */
