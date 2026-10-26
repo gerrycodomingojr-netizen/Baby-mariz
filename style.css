@@ -12,8 +12,9 @@ body {
     font-family: Arial, sans-serif;
     color: #3d2630;
     background:
-        radial-gradient(circle at top, rgba(255, 202, 214, 0.9), transparent 30%),
-        linear-gradient(180deg, #fffdfd 0%, #fff3f8 100%);
+        radial-gradient(circle at top left, rgba(255, 189, 209, 0.9), transparent 24%),
+        radial-gradient(circle at bottom right, rgba(214, 180, 255, 0.8), transparent 28%),
+        linear-gradient(180deg, #fffafc 0%, #fff4fa 100%);
     overflow-x: hidden;
     position: relative;
 }
@@ -46,7 +47,7 @@ section {
     display: inline-block;
     animation: floatUp 3s ease-in forwards;
     user-select: none;
-    filter: drop-shadow(0 0 10px rgba(237, 82, 121, 0.35));
+    filter: drop-shadow(0 0 12px rgba(237, 82, 121, 0.35));
     z-index: 0;
 }
 
@@ -61,18 +62,18 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0 7%;
-    background: rgba(255, 247, 250, 0.88);
+    background: rgba(255, 247, 250, 0.8);
     backdrop-filter: blur(18px);
     z-index: 100;
-    border-bottom: 1px solid rgba(255, 100, 150, 0.1);
-    box-shadow: 0 12px 28px rgba(237, 82, 121, 0.08);
+    border-bottom: 1px solid rgba(255, 100, 150, 0.12);
+    box-shadow: 0 10px 28px rgba(237, 82, 121, 0.06);
 }
 
 .logo {
     font-size: clamp(1.3rem, 2vw, 1.7rem);
     font-weight: 800;
     color: #ed5279;
-    text-shadow: 0 0 18px rgba(237, 82, 121, 0.2);
+    text-shadow: 0 0 18px rgba(237, 82, 121, 0.18);
 }
 
 .nav-links {
@@ -86,7 +87,7 @@ nav {
     text-decoration: none;
     font-size: 14px;
     transition: 0.3s;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .nav-links a:hover {
@@ -95,12 +96,13 @@ nav {
 
 .music-btn {
     border: none;
-    background: #ed5279;
+    background: linear-gradient(135deg, #ff7ca9, #ed5279);
     color: white;
     padding: 10px 18px;
     border-radius: 20px;
     cursor: pointer;
     white-space: nowrap;
+    box-shadow: 0 10px 18px rgba(237, 82, 121, 0.25);
 }
 
 /* HERO */
@@ -112,13 +114,29 @@ nav {
     justify-content: space-between;
     gap: clamp(25px, 6vw, 60px);
     background:
-        radial-gradient(circle at 10% 20%, #ffdce7 0, transparent 30%),
-        radial-gradient(circle at 90% 80%, #eadbff 0, transparent 30%),
-        linear-gradient(135deg, #fff0f5 0%, #fff9fc 100%);
+        radial-gradient(circle at 15% 20%, rgba(255, 210, 225, 0.95), transparent 28%),
+        radial-gradient(circle at 80% 75%, rgba(218, 201, 255, 0.9), transparent 26%),
+        linear-gradient(135deg, #fff7fb 0%, #fff0f5 100%);
 }
 
 .hero-content {
     max-width: 650px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(237, 82, 121, 0.18);
+    color: #d64d79;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    box-shadow: 0 12px 26px rgba(237, 82, 121, 0.08);
 }
 
 .small-title,
@@ -135,7 +153,7 @@ nav {
     font-size: clamp(3.2rem, 9vw, 6.2rem);
     line-height: 0.9;
     margin-bottom: 25px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.05em;
 }
 
 .hero h1 span {
@@ -145,16 +163,24 @@ nav {
 }
 
 .hero-text {
-    max-width: 520px;
+    max-width: 540px;
     color: #765761;
     font-size: clamp(1.05rem, 2vw, 1.2rem);
     line-height: 1.8;
     margin-bottom: 30px;
 }
 
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
 .main-btn,
 .surprise-btn,
-.restart-btn {
+.restart-btn,
+.ghost-btn {
     border: none;
     background: linear-gradient(135deg, #ff6b9f, #ed5279 50%, #d93d72);
     color: white;
@@ -166,9 +192,17 @@ nav {
     box-shadow: 0 12px 28px rgba(237, 82, 121, 0.35);
 }
 
+.ghost-btn {
+    background: rgba(255, 255, 255, 0.75);
+    color: #d64d79;
+    border: 1px solid rgba(237, 82, 121, 0.18);
+    box-shadow: none;
+}
+
 .main-btn:hover,
 .surprise-btn:hover,
-.restart-btn:hover {
+.restart-btn:hover,
+.ghost-btn:hover {
     transform: translateY(-4px) scale(1.01);
     box-shadow: 0 18px 32px rgba(237, 82, 121, 0.45);
 }
@@ -191,15 +225,15 @@ nav {
     width: 100%;
     height: min(500px, 70vw);
     object-fit: cover;
-    border-radius: 25px;
+    border-radius: 26px;
     border: 12px solid white;
     box-shadow: 0 25px 60px rgba(100, 50, 70, 0.2);
 }
 
 .photo-heart {
     position: absolute;
-    bottom: -20px;
-    left: -20px;
+    bottom: -22px;
+    left: -22px;
     font-size: 60px;
     animation: heartbeat 1.5s infinite;
 }
@@ -229,8 +263,8 @@ nav {
 .counter-box {
     width: clamp(90px, 18vw, 120px);
     padding: 25px 15px;
-    border-radius: 20px;
-    background: #fff1f5;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #fff7fa 0%, #fff1f5 100%);
     box-shadow: 0 12px 24px rgba(237, 82, 121, 0.08);
 }
 
@@ -254,7 +288,7 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 80px;
-    background: #fff7fa;
+    background: linear-gradient(180deg, #fff7fa 0%, #fffafc 100%);
 }
 
 .letter-image {
@@ -271,6 +305,11 @@ nav {
 
 .letter {
     max-width: 550px;
+    background: rgba(255,255,255,0.5);
+    padding: 28px 26px;
+    border-radius: 24px;
+    border: 1px solid rgba(237,82,121,0.08);
+    backdrop-filter: blur(8px);
 }
 
 .letter h2 {
@@ -311,17 +350,17 @@ nav {
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3, minmax(180px, 1fr));
-    gap: 20px;
+    gap: 22px;
 }
 
 .gallery-item {
     height: min(350px, 60vw);
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 22px;
     cursor: pointer;
     border: 2px solid rgba(237, 82, 121, 0.08);
-    box-shadow: 0 14px 30px rgba(133, 72, 95, 0.08);
+    box-shadow: 0 18px 36px rgba(133, 72, 95, 0.08);
 }
 
 .gallery-item img {
@@ -332,7 +371,7 @@ nav {
 }
 
 .gallery-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .overlay {
@@ -383,7 +422,7 @@ nav {
 .game-score-box {
     min-width: 120px;
     padding: 18px 20px;
-    background: white;
+    background: rgba(255,255,255,0.8);
     border-radius: 18px;
     box-shadow: 0 10px 25px rgba(100, 50, 70, 0.08);
 }
@@ -515,9 +554,10 @@ nav {
     max-width: 550px;
     margin: 40px auto 0;
     padding: 45px 30px;
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 30px;
     box-shadow: 0 20px 60px rgba(100, 50, 70, 0.15);
+    backdrop-filter: blur(8px);
 }
 
 .surprise-box.show {
@@ -554,7 +594,7 @@ nav {
     font-size: 0.92rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    background: #fff7fa;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,247,250,0.8) 100%);
 }
 
 .footer-love span {
@@ -563,7 +603,7 @@ nav {
     border-radius: 999px;
     border: 1px solid rgba(237, 82, 121, 0.25);
     background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 10px 24px rgba(237, 82, 121, 0.08);
+    box-shadow: 0 12px 24px rgba(237, 82, 121, 0.08);
 }
 
 /* ANIMATIONS */
@@ -599,6 +639,10 @@ nav {
     .letter-section {
         flex-direction: column;
         text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
     }
 
     .gallery {
@@ -657,7 +701,8 @@ nav {
 
     .main-btn,
     .surprise-btn,
-    .restart-btn {
+    .restart-btn,
+    .ghost-btn {
         width: 100%;
         max-width: 260px;
     }
